@@ -1,11 +1,4 @@
 ---
-apiVersion: v1
-kind: Namespace
-metadata:
-  labels:
-    name: weave
-  name: weave
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
