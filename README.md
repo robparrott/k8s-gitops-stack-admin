@@ -1,6 +1,14 @@
 # Overview
 
-Provides a set of kubernetes adminstrative access, contorl, and visibility tooling.
+Provides a set of kubernetes adminstrative access, control, and visibility tooling.
+
+The layout convention is as follows:
+
+* `admin-stack.yaml`: provides a "stack" manifest definition for the entire set of packages
+* `packages/`: path to a set of manifests which each provides a suite of functionality defined under `modules/`
+* `modules/`: defines a single unit of deployment for an application on component; these may reference a path in implementation of a single helm chart
+* `implementation/`: additional manifests pulled in to support a module.
+
 
 # Accessing
 
