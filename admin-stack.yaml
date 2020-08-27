@@ -1,5 +1,18 @@
 ---
 apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: admin
+  namespace: argocd
+  # Finalizer that ensures that project is not deleted until it is not referenced by any application
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  # Project description
+  description: Admin Tools Project
+
+---
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: stack-admin
@@ -7,7 +20,7 @@ metadata:
   # finalizers:  # Add a this finalizer ONLY if you want these to cascade delete.
   #   - resources-finalizer.argocd.argoproj.io  
 spec:
-  project: default
+  project: admin
   source:
     directory:
       recurse: true
