@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kubernetes-dashboard
+  name: app-admin-kubernetes-dashboard
   namespace: argocd
 
   # finalizers:  # Add a this finalizer ONLY if you want these to cascade delete.
