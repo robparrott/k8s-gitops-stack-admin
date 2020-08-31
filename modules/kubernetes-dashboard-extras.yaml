@@ -16,9 +16,10 @@ spec:
     repoURL: https://github.com/robparrott/k8s-gitops-stack-admin.git
     targetRevision: HEAD
     path: implementation/kubernetes-dashboard-extras
+    
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: kubernetes-dashboard
 
   # Sync policy
   syncPolicy:

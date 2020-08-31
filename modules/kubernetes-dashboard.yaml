@@ -33,14 +33,10 @@ spec:
       # Release name override (defaults to application name)
       releaseName: kubernetes-dashboard
 
-    values:
-
-      # Use HTTP for dev purposes
-      protocolHttp: true
 
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: kube-system
+    namespace: kubernetes-dashboard
 
   # Sync policy
     syncPolicy:
