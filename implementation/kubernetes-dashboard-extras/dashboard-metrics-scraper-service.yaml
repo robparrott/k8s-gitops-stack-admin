@@ -19,7 +19,7 @@ metadata:
   labels:
     k8s-app: dashboard-metrics-scraper
   name: dashboard-metrics-scraper
-  namespace: kube-system
+  namespace: kubernetes-dashboard
 spec:
   ports:
     - port: 8000
