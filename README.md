@@ -24,13 +24,16 @@ echo $TOKEN
 
 ## Kubernetes Dashboard:
 
+For Kubernetes Dashboard access, use the kubernetes proxy command:
 ```
-kubectl port-forward service/kubernetes-dashboard -n kube-system 8443:443 
+kubectl proxy
 ```
 
 Then access at 
 
-* https://localhost:8443
+* http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:https/proxy/
+
+Use the above token to connect.
 
 ## WeaveScope
 
