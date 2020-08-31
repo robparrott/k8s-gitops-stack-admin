@@ -40,9 +40,10 @@ spec:
       releaseName: kubernetes-dashboard
 
       values: |
+
         metricsScraper:
           enabled: true
-          
+
         metrics-server:
           enabled: true
 
