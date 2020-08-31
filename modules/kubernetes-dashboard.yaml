@@ -42,6 +42,9 @@ spec:
       values: |
         metricsScraper:
           enabled: true
+          
+        metrics-server:
+          enabled: true
 
   destination:
     server: 'https://kubernetes.default.svc'
