@@ -39,6 +39,9 @@ spec:
       # Release name override (defaults to application name)
       releaseName: kubernetes-dashboard
 
+    values:
+      metricsScraper:
+        enabled: true
 
   destination:
     server: 'https://kubernetes.default.svc'
